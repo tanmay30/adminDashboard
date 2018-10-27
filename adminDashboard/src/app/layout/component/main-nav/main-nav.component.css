@@ -1,0 +1,73 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #313540;
+}
+
+.horizontalNav{
+
+  box-shadow: 5px 13px 25px -8px rgba(0,0,0,0.52);
+}
+
+.materialNavClass{
+  background-color: #33419e;
+  color: aliceblue;
+}
+
+.materlSideBar{
+  color: aliceblue !important;
+}
+
+.materlSideBar:hover{
+  background-color:#0aa8f4 !important;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+
+.horizontal-nav{
+  display: flex;
+  box-shadow: 5px 0px 25px -2px rgba(0,0,0,0.52);
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.account_button{
+  margin-right:10%;
+}
+.account_box{
+  font-size: 30px;
+  padding: 5px;
+
+}
+
+.mat_menu {
+  width: 200px;
+}
+
+#profile_icon {
+  position: absolute;
+  margin-top: 12px;
+}
+
+#my_profile{
+  margin-left: 30px;
+}
+
+#profile{
+font-size:18px;
+}
+
+.router-link-active
+{
+  background-color: #fafafa;
+  color:#343842 !important;
+}

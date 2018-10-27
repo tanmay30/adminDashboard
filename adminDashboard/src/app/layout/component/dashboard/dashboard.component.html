@@ -1,0 +1,115 @@
+<div class="container-fluid">
+  <div class="col-md-12 dashboardMainDiv" >
+    <mat-card class="example-card">
+      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #0aa8f4;">
+        <mat-card-title><h3>Admin</h3></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card class="number-card"><span class="numbers">24</span></mat-card>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card ">
+      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #06a198;">
+        <mat-card-title><h3>Candidate</h3></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card class="number-card"><span class="numbers">24</span></mat-card>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card">
+      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #FF8A65;">
+        <mat-card-title><h3>Job</h3></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card class="number-card" color><span class="numbers">24</span></mat-card>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card">
+      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #AB47BC;">
+        <mat-card-title><h3>Activity</h3></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card class="number-card" style="border-color:#cc69e0;"><span class="numbers">24</span></mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+
+
+  <div class="col-md-6 chartDiv">
+    <!-- Admin Charts -->
+    <mat-card class="mainMatCard">
+        <mat-card-header class="chartCardHeader" style="background-color:#0aa8f4">
+            <mat-card-title>
+              <div><h4 style="display: inline;">Admin</h4>
+                <i class="material-icons closeIcon">
+                    close
+                </i>
+              </div>
+            </mat-card-title>
+        </mat-card-header>
+      <mat-card-content class="chartMatContent">
+        <dx-chart
+          id="chart"
+          [dataSource]="adminChart">
+          <dxi-series
+              argumentField="day"
+              valueField="oranges"
+              name="My oranges"
+              type="bar"
+              color="#64B5F6">
+          </dxi-series>
+        </dx-chart>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Candidate Charts -->
+    <mat-card class="mainMatCard">
+        <mat-card-header class="chartCardHeader" style="background-color:#06a198">
+            <mat-card-title>
+              <div><h4 style="display: inline;">Candidate</h4>
+                <i class="material-icons closeIcon" style="margin-left: 77%;">close</i>
+              </div>
+            </mat-card-title>
+        </mat-card-header>
+      <mat-card-content class="chartMatContent">
+        <dx-chart
+        id="chart"
+        [dataSource]="candidateChart">
+        <dxi-series valueField="hydro" name="Hydro-electric"></dxi-series>
+        <dxi-series valueField="oil" name="Oil"></dxi-series>
+        <dxi-series valueField="gas" name="Natural gas"></dxi-series>
+        <dxi-series valueField="coal" name="Coal"></dxi-series>
+        <dxi-series valueField="nuclear" name="Nuclear"></dxi-series>
+        <dxo-common-series-settings
+            argumentField="country"
+            type="fullStackedBar">
+        </dxo-common-series-settings>
+        <dxo-legend
+            verticalAlignment="top"
+            horizontalAlignment="center"
+            itemTextPosition="right">
+        </dxo-legend>
+        <!-- <dxo-title text="Energy Consumption in 2004">
+            <dxo-subtitle text="(Millions of Tons, Oil Equivalent)"></dxo-subtitle>
+        </dxo-title> -->
+        <dxo-export [enabled]="true"></dxo-export>
+        <dxo-tooltip
+            [enabled]="true"
+            [customizeTooltip]="customizeTooltip">
+        </dxo-tooltip>
+        </dx-chart>
+      </mat-card-content>
+    </mat-card>
+
+
+  </div>
+</div>
+
+
+
+

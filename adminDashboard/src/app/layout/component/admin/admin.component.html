@@ -1,0 +1,77 @@
+<div class="container-fluid" id="adminContainer">
+  <div class="col-md-10 navTitle">
+      <div class="col-md-2 titleDiv">
+        <h1>Admin</h1>
+      </div>
+  </div>
+
+  <div class="col-md-10 col-sm-10 mainDiv">
+
+    <!-- <dxo-search-panel
+      [visible]="true"
+      [width]="240"
+      placeholder="Search...">
+    </dxo-search-panel> -->
+
+    <dx-data-grid
+      id="gridContainer"
+      [dataSource]="orders"
+      (onInitialized)="onInitialized($event)"
+      [showBorders]="true">
+      <dxo-scrolling mode="virtual" rowRenderingMode="virtual" ></dxo-scrolling>
+
+      <dxo-filter-row
+          [applyFilter]="currentFilter"></dxo-filter-row>
+      <dxo-header-filter
+          [visible]="showHeaderFilter"></dxo-header-filter>
+      <dxo-search-panel
+          [visible]="true"
+          [width]="240"
+          placeholder="Search..."></dxo-search-panel>
+      <dxi-column
+          dataField="UserType"
+         alignment="center"
+          [width]="160"
+          caption="User Type">
+          <dxo-header-filter
+          [dataSource]="orderHeaderFilter"></dxo-header-filter>
+      </dxi-column>
+      <dxi-column
+          dataField="UserName"
+         alignment="center"
+          [width]="160"
+          >
+          <dxo-header-filter
+              [dataSource]="orderHeaderFilter"></dxo-header-filter>
+      </dxi-column>
+      <dxi-column
+          dataField="Title"
+         alignment="center"
+          [width]="160"></dxi-column>
+      <dxi-column
+          dataField="FirstName"
+          alignment="center"
+          [width]="160">
+      </dxi-column>
+      <dxi-column dataField="LastName"
+       alignment="center"
+        [width]="160"></dxi-column>
+      <dxi-column
+          dataField="Email"
+         alignment="center"
+        [width]="160">
+        <dxo-header-filter
+        [allowSearch]="true"   ></dxo-header-filter>
+      </dxi-column>
+      <dxi-column
+          dataField="Phone"
+         alignment="center"
+        [width]="160">
+      </dxi-column>
+      <dxi-column
+          dataField="Zip"
+         alignment="center"
+        [width]="160">
+      </dxi-column>
+    </dx-data-grid>
+</div>

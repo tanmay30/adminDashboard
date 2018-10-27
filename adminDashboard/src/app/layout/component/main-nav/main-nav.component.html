@@ -1,0 +1,64 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar class="materialNavClass">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item class="materlSideBar" routerLinkActive="active" routerLink="/home" routerLinkActive="router-link-active"><i class="material-icons">
+        dashboard
+        </i>&nbsp;&nbsp;&nbsp;<p>Dashboard</p></a>
+      <a mat-list-item class="materlSideBar" routerLinkActive="active" routerLink="/admin" routerLinkActive="router-link-active"><i class="material-icons">
+        domain
+        </i>&nbsp;&nbsp;&nbsp;<p>Admin</p></a>
+      <a mat-list-item class="materlSideBar" routerLinkActive="active" routerLink="/candidate" routerLinkActive="router-link-active"><i class="material-icons">
+        person
+        </i>&nbsp;&nbsp;&nbsp;<p>Candidate</p></a>
+      <a mat-list-item class="materlSideBar" routerLinkActive="active" routerLink="/jobs" routerLinkActive="router-link-active"><i class="material-icons">
+        work
+        </i>&nbsp;&nbsp;&nbsp;<p>Jobs</p></a>
+      <a mat-list-item class="materlSideBar" routerLinkActive="active" routerLink="/activity" routerLinkActive="router-link-active"><i class="material-icons">
+        local_activity
+        </i>&nbsp;&nbsp;&nbsp;<p>Activity</p></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="horizontalNav" color="warm">
+      <button
+        type="button"cd
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!-- Add toolbar content-->
+      <mat-toolbar  class="horizontal-nav" color="warm">
+        <span>Manage Candidate</span>
+        <!-- This fills the remaining space of the current row -->
+        <span class="example-fill-remaining-space"></span>
+        <!-- <span> Aligned Text</span> -->
+
+        <button mat-button [matMenuTriggerFor]="menu" class="account_button"><i class="material-icons account_box">account_box</i><span id="profile">Profile</span></button>
+        <mat-menu #menu="matMenu">
+          <div class="mat_menu">
+            <div class="menu-item-profile">
+                <button mat-menu-item  class="Profile_button"><i class="material-icons" id="profile_icon">account_box</i> <span id="my_profile">My Profile</span></button>
+                <button mat-menu-item  class="Profile_button"><i class="material-icons" id="profile_icon">email</i> <span id="my_profile">Inbox</span></button>
+                <button mat-menu-item  class="Profile_button"><i class="material-icons" id="profile_icon">exit_to_app</i> <span id="my_profile">Logout</span></button>
+
+            </div>
+          </div>
+        </mat-menu>
+
+      </mat-toolbar>
+
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

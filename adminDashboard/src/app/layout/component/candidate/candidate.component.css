@@ -1,0 +1,21 @@
+@import "../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+#candidateContainer{
+  padding-top: 10px;
+}
+
+#gridContainer{
+  padding-top: 20px;
+}
+
+.navTitle{
+
+  height: 100px;
+  background-color:#06a198;
+  color: aliceblue;
+}
+
+.titleDiv{
+  padding: 20px 0px 0px 20px;
+}

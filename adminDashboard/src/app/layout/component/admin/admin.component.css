@@ -1,0 +1,39 @@
+@import "../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* .adminGrid{
+  margin: 10% 0% 0% 10%;
+}
+
+.card{
+  background-color: #03a9f4 !important;
+  width: 1200px;
+} */
+
+#adminContainer{
+padding-top: 10px;
+}
+
+#gridContainer{
+  padding-top: 20px;
+}
+
+.mainDiv{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 640px;
+}
+
+.navTitle{
+
+  height: 100px;
+  background-color:#0aa8f4;
+  color: aliceblue;
+}
+
+.titleDiv{
+  padding: 20px 0px 0px 20px;
+}
+
+
+::ng-deep #gridContainer {
+  height: 440px;
+}

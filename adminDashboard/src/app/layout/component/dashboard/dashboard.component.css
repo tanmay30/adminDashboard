@@ -1,0 +1,66 @@
+@import "../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* .dashboardMainDiv{
+
+} */
+.example-card {
+  width:250px;
+  height:250px;
+  margin:3% 2.5% 0 4%;
+  float:none; /* disable the float */
+  display: inline-block; /* make blocks inline-block */
+  text-align: center;  /*restore text-align to default */
+
+}
+
+/* .title-card{
+} */
+.cardHeader{
+  width: 250px;
+  height: 96px;
+  padding: 26px;
+  margin: -24px;
+}
+.number-card {
+  width:80px;
+  height:80px;
+  padding-right:31px;
+  margin-left:9px;
+}
+
+.numbers{
+  font-family:'digital-clock-font';
+  font-size: 30px;
+  color: #546E7A;
+}
+
+.closeIcon{
+  float: right;
+  margin: 0.5% 1px 0.5px 82%;
+  position: absolute
+}
+.mainMatCard{
+  padding: 0%;
+}
+
+.chartMatContent{
+  padding: 3%;
+}
+
+
+.chartCardHeader{
+  width: auto;
+  height: 50px;
+  padding: 10px 0px 0px 25px;
+  margin-top:0px;
+  color:#FAFAFA;
+}
+
+
+::ng-deep #chart {
+  height: 440px;
+}
+
+.chartDiv{
+  margin: 30px 0px 0px 65px;
+}
