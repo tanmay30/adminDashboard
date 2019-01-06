@@ -64,3 +64,17 @@
 .chartDiv{
   margin: 30px 0px 0px 65px;
 }
+
+.chartButton{
+  margin-left:-30%;
+}
+
+.gridButton{
+  display: inline;
+  margin-left: 2%;
+}
+
+.secondP2Class{
+  width:50%;
+  margin:0.5%;
+}

@@ -1,48 +1,61 @@
 <div class="container-fluid">
-  <div class="col-md-12 dashboardMainDiv" >
-    <mat-card class="example-card">
-      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #0aa8f4;">
-        <mat-card-title><h3>Admin</h3></mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-card class="number-card"><span class="numbers">24</span></mat-card>
-      </mat-card-content>
-    </mat-card>
+  
 
-    <mat-card class="example-card ">
-      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #06a198;">
-        <mat-card-title><h3>Candidate</h3></mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-card class="number-card"><span class="numbers">24</span></mat-card>
-      </mat-card-content>
-    </mat-card>
+  <div class="d-flex flex-row">
+    <div class="p-2">
+      <mat-card class="example-card" *ngIf="showWidget1">
+        <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #0aa8f4;">
+          <mat-card-title><h3>Admin</h3></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card class="number-card"><span class="numbers">24</span></mat-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="button" class="btn btn-primary chartButton" (click)="toggleCards('widget1')">Chart</button>
+          <button type="button" class="btn btn-primary gridButton" (click)= "routeAdmin()">Grid</button>
+        </mat-card-actions>
+      </mat-card>
+  
+      <mat-card class="example-card " *ngIf="showWidget2">
+        <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #06a198;">
+          <mat-card-title><h3>Candidate</h3></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card class="number-card"><span class="numbers">24</span></mat-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="button" class="btn btn-primary chartButton" (click)="toggleCards('widget2')">Chart</button>
+          <button type="button" class="btn btn-primary gridButton" (click)= "routeCandidate()">Grid</button>
+        </mat-card-actions>
+      </mat-card>
+  
+      <mat-card class="example-card" *ngIf="showWidget3">
+        <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #FF8A65;">
+          <mat-card-title><h3>Job</h3></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card class="number-card" color><span class="numbers">24</span></mat-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="button" class="btn btn-primary chartButton" (click)="toggleCards('widget3')">Chart</button>
+        </mat-card-actions>
+      </mat-card>
+  
+      <mat-card class="example-card" *ngIf="showWidget4">
+        <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #AB47BC;">
+          <mat-card-title><h3>Activity</h3></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card class="number-card" style="border-color:#cc69e0;"><span class="numbers">24</span></mat-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="button" class="btn btn-primary chartButton" (click)="toggleCards('widget4')">Chart</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
-    <mat-card class="example-card">
-      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #FF8A65;">
-        <mat-card-title><h3>Job</h3></mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-card class="number-card" color><span class="numbers">24</span></mat-card>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <mat-card-header class="cardHeader" style="margin-top:-24px; background-color: #AB47BC;">
-        <mat-card-title><h3>Activity</h3></mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-card class="number-card" style="border-color:#cc69e0;"><span class="numbers">24</span></mat-card>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-
-
-
-  <div class="col-md-6 chartDiv">
-    <!-- Admin Charts -->
-    <mat-card class="mainMatCard">
+    <div class="p-2 secondP2Class">
+      <mat-card class="mainMatCard" *ngIf="showWidget11">
         <mat-card-header class="chartCardHeader" style="background-color:#0aa8f4">
             <mat-card-title>
               <div><h4 style="display: inline;">Admin</h4>
@@ -68,7 +81,7 @@
     </mat-card>
 
     <!-- Candidate Charts -->
-    <mat-card class="mainMatCard">
+    <mat-card class="mainMatCard" *ngIf="showWidget22">
         <mat-card-header class="chartCardHeader" style="background-color:#06a198">
             <mat-card-title>
               <div><h4 style="display: inline;">Candidate</h4>
@@ -106,7 +119,7 @@
       </mat-card-content>
     </mat-card>
 
-
+    </div>
   </div>
 </div>
 
